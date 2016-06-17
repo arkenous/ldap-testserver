@@ -1,0 +1,26 @@
+# trileg.net
+dn: dc=trileg,dc=net
+dc: trileg
+o: Example Organization
+objectClass: dcObject
+objectClass: organization
+
+# Manager, trileg.net
+dn: cn=Manager,dc=trileg,dc=net
+cn: Manager
+description: LDAP administrator
+objectClass: organizationalRole
+objectClass: top
+roleOccupant: dc=trileg,dc=net
+
+# People, trileg.net
+dn: ou=People,dc=trileg,dc=net
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+
+# Groups, trileg.net
+dn: ou=Group,dc=trileg,dc=net
+ou: Group
+objectClass: top
+objectClass: organizationalUnit

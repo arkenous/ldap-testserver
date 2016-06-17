@@ -1,0 +1,20 @@
+--- slapd.conf.origin	2016-06-17 15:18:43.813878160 +0000
++++ slapd.conf	2016-06-17 15:20:12.524155545 +0000
+@@ -48,6 +48,17 @@
+ #
+ # rootdn can always read and write EVERYTHING!
+ 
++access to attrs=userPassword,givenName,sn,photo
++	by self read
++	by anonymous auth
++	by dn.base="cn=Manager,dc=example,dc=org" write
++	by * none
++
++access to *
++	by self read
++	by dn.base="cn=Manager,dc=trileg,dc=net" write
++	by * read
++
+ #######################################################################
+ # MDB database definitions
+ #######################################################################

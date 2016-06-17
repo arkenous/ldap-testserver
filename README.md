@@ -8,4 +8,9 @@
 
 Docker image to build LDAP test server.
 
-Please modify suffix and rootdn on slapd.conf.patch
+# Please modify patches before building
+- slapd.conf.patch1: suffix and rootdn
+- ldap.conf.patch: BASE
+
+# Please change Manager password by below command
+`echo -n 'your preferred password' > latest/files/manager_pass.txt`

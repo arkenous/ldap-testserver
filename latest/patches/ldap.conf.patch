@@ -1,0 +1,13 @@
+--- ldap.conf.origin	2016-06-17 08:43:20.157024906 +0000
++++ ldap.conf	2016-06-17 08:46:27.649574120 +0000
+@@ -5,8 +5,8 @@
+ # See ldap.conf(5) for details
+ # This file should be world readable but not world writable.
+ 
+-#BASE	dc=example,dc=com
+-#URI	ldap://ldap.example.com ldap://ldap-master.example.com:666
++BASE	dc=trileg,dc=net
++URI	ldap://localhost
+ 
+ #SIZELIMIT	12
+ #TIMELIMIT	15
