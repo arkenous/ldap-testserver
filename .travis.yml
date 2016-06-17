@@ -1,0 +1,10 @@
+language: python
+sudo: required
+services:
+  - docker
+
+env:
+  - TARGET_CONTAINER_ID=container-ldap-testserver
+
+script:
+  - docker build -t ldap-testserver latest/
