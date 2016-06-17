@@ -1,0 +1,36 @@
+--- slapd.conf.origin	2016-06-17 04:29:43.794459011 +0000
++++ slapd.conf	2016-06-17 05:03:31.943306124 +0000
+@@ -3,6 +3,9 @@
+ # This file should NOT be world readable.
+ #
+ include		/etc/openldap/schema/core.schema
++include		/etc/openldap/schema/cosine.schema
++include		/etc/openldap/schema/inetorgperson.schema
++include		/etc/openldap/schema/nis.schema
+ 
+ # Define global ACLs to disable default read access.
+ 
+@@ -51,15 +54,20 @@
+ 
+ database	mdb
+ maxsize		1073741824
+-suffix		"dc=my-domain,dc=com"
+-rootdn		"cn=Manager,dc=my-domain,dc=com"
++suffix		"dc=trileg,dc=net"
++rootdn		"cn=Manager,dc=trileg,dc=net"
+ # Cleartext passwords, especially for the rootdn, should
+ # be avoid.  See slappasswd(8) and slapd.conf(5) for details.
+ # Use of strong authentication encouraged.
+-rootpw		secret
++rootpw   {SSHA}d3WC12WvLH05D3NhduOfeZNrmyDRedpH
+ # The database directory MUST exist prior to running slapd AND 
+ # should only be accessible by the slapd and slap tools.
+ # Mode 700 recommended.
+ directory	/var/lib/openldap/openldap-data
+ # Indices to maintain
+ index	objectClass	eq
++index	uid		pres,eq
++index	mail		pres,sub,eq
++index	cn		pres,sub,eq
++index	sn		pres,sub,eq
++index	dc		eq
