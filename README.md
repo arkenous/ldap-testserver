@@ -3,3 +3,5 @@
 [![license](https://img.shields.io/github/license/trileg/ldap-testserver.svg?maxAge=2592000)](LICENSE)
 
 Docker image to build LDAP test server.
+
+Please modify suffix and rootdn on slapd.conf.patch
