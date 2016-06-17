@@ -3,13 +3,14 @@ FROM trileg/arch-base:latest
 MAINTAINER Kensuke Kosaka <kosaka@trileg.net>
 
 RUN pacman -Syu --noconfirm patch openldap &> /dev/null
+
 COPY patches/slapd.conf.patch1 /tmp/slapd.conf.patch
 RUN patch -u /etc/openldap/slapd.conf < /tmp/slapd.conf.patch && \
   rm -f /tmp/slapd.conf.patch
 
 COPY files/manager_pass.txt /tmp/manager_pass.txt
 RUN sed -i '/^rootpw/d' /etc/openldap/slapd.conf && \
-  echo "rootpw    $(slappasswd -T /tmp/manager_pass.txt)" >> /etc/openldap/slapd.conf &> /dev/null && \
+  echo "rootpw $(slappasswd -T /tmp/manager_pass.txt)" >> /etc/openldap/slapd.conf && \
   rm -f /tmp/manager_pass.txt
 
 RUN cp /etc/openldap/DB_CONFIG.example /var/lib/openldap/openldap-data/DB_CONFIG
@@ -46,6 +47,7 @@ COPY files/base.ldif /tmp/base.ldif
 COPY files/manager_pass.txt /tmp/manager_pass.txt
 RUN slapd && \
   sleep 5s && \
-  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/base.ldif &> null && \
+  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/base.ldif &> /dev/null && \
   rm -f /tmp/base.ldif && \
   rm -f /tmp/manager_pass.txt
+
