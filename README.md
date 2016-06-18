@@ -18,13 +18,15 @@ Docker image to build LDAP test server.
 ### Please change Manager password by below command
 `echo -n 'your preferred password' > latest/files/manager_pass.txt`
 
-## Info
+-----
+
 ### DN
 - Base DN: `dc=trileg,dc=net`
 - User DN: `uid=charlotte,ou=People,dc=trileg,dc=net`
+
 ### User list
 - uid=`charlotte`, password=`dunois`
-- uid=`laura`, `password=`bodewig`
-- uid=`houki`, `password=`shinonono`
-- uid=`cecilia`, `password=`alcott`
-- uid=`lingyin`, `password=`huang`
+- uid=`laura`, password=`bodewig`
+- uid=`houki`, password=`shinonono`
+- uid=`cecilia`, password=`alcott`
+- uid=`lingyin`, password=`huang`
