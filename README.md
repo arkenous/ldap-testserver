@@ -20,6 +20,18 @@ Docker image to build LDAP test server.
 
 -----
 
+## How to use this?
+Build docker image using Dockerfile
+```
+docker build -t ldap-testserver latest/
+```
+
+Run docker container from builded image
+```
+docker run -p 50389:389 -d ldap-testserver
+```
+Host 50389 port <-> Container 389 port
+
 ### DN
 - Base DN: `dc=trileg,dc=net`
 - User DN: `uid=charlotte,ou=People,dc=trileg,dc=net`
