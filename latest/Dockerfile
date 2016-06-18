@@ -14,15 +14,13 @@ RUN sed -i '/^rootpw/d' /etc/openldap/slapd.conf && \
   rm -f /tmp/manager_pass.txt
 
 RUN cp /etc/openldap/DB_CONFIG.example /var/lib/openldap/openldap-data/DB_CONFIG
-RUN chown ldap:ldap /var/lib/openldap/openldap-data/DB_CONFIG
 
 RUN rm -rf /etc/openldap/slapd.d/* && \
-  slapd -u ldap -g ldap && \
+  slapd && \
+  sleep 5s && \
   killall slapd && \
   slaptest -f /etc/openldap/slapd.conf -F /etc/openldap/slapd.d/ &> /dev/null && \
-  slapindex &> /dev/null && \
-  chown -R ldap:ldap /etc/openldap/slapd.d && \
-  chown ldap:ldap /var/lib/openldap/openldap-data/*
+  slapindex &> /dev/null
 
 # client
 COPY patches/ldap.conf.patch /tmp/ldap.conf.patch
@@ -35,12 +33,11 @@ RUN patch -u /etc/openldap/slapd.conf < /tmp/slapd.conf.patch && \
   rm -f /tmp/slapd.conf.patch
 
 RUN rm -rf /etc/openldap/slapd.d/* && \
-  slapd -u ldap -g ldap && \
+  slapd && \
+  sleep 5s && \
   killall slapd && \
   slaptest -f /etc/openldap/slapd.conf -F /etc/openldap/slapd.d/ &> /dev/null && \
-  slapindex &> /dev/null && \
-  chown -R ldap:ldap /etc/openldap/slapd.d && \
-  chown ldap:ldap /var/lib/openldap/openldap-data/*
+  slapindex &> /dev/null
 
 # Add base data to OpenLDAP tree
 COPY files/base.ldif /tmp/base.ldif
