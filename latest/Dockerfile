@@ -73,3 +73,5 @@ RUN slapd && \
   rm -f /tmp/Cecilia_Alcott.ldif && \
   rm -f /tmp/Lingyin_Huang.ldif && \
   killall slapd
+
+CMD ["/usr/sbin/slapd", "-d", "Config,Stats"]
