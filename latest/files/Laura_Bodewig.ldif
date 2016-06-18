@@ -1,0 +1,16 @@
+dn: uid=laura,ou=People,dc=trileg,dc=net
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: laura
+cn: Laura Bodewig
+sn: Bodewig
+givenName: Laura
+userPassword: {SSHA}1H7AWYlhVUiXC2O6WMg4nuklVYvdrsB1
+LoginShell: /bin/false
+uidNumber: 1002
+gidNumber: 1002
+homeDirectory: /home/laura/

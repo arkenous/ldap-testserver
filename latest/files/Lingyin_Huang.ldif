@@ -1,0 +1,16 @@
+dn: uid=lingyin,ou=People,dc=trileg,dc=net
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: lingyin
+cn: Lingyin Huang
+sn: Huang
+givenName: Lingyin
+userPassword: {SSHA}5ibxeSaq5IRek4TiTX4Die+TAZzwGE2i
+LoginShell: /bin/false
+uidNumber: 1005
+gidNumber: 1005
+homeDirectory: /home/lingyin/

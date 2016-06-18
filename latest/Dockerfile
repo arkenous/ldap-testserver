@@ -48,6 +48,28 @@ COPY files/manager_pass.txt /tmp/manager_pass.txt
 RUN slapd && \
   sleep 5s && \
   ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/base.ldif &> /dev/null && \
+  killall slapd && \
   rm -f /tmp/base.ldif && \
   rm -f /tmp/manager_pass.txt
 
+# Add test users
+COPY files/manager_pass.txt /tmp/manager_pass.txt
+COPY files/Charlotte_Dunois.ldif /tmp/Charlotte_Dunois.ldif
+COPY files/Laura_Bodewig.ldif /tmp/Laura_Bodewig.ldif
+COPY files/Houki_Shinonono.ldif /tmp/Houki_Shinonono.ldif
+COPY files/Cecilia_Alcott.ldif /tmp/Cecilia_Alcott.ldif
+COPY files/Lingyin_Huang.ldif /tmp/Lingyin_Huang.ldif
+RUN slapd && \
+  sleep 5s && \
+  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Charlotte_Dunois.ldif && \
+  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Laura_Bodewig.ldif && \
+  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Houki_Shinonono.ldif && \
+  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Cecilia_Alcott.ldif && \
+  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Lingyin_Huang.ldif && \
+  rm -f /tmp/manager_pass.txt && \
+  rm -f /tmp/Charlotte_Dunois.ldif && \
+  rm -f /tmp/Laura_Bodewig.ldif && \
+  rm -f /tmp/Houki_Shinonono.ldif && \
+  rm -f /tmp/Cecilia_Alcott.ldif && \
+  rm -f /tmp/Lingyin_Huang.ldif && \
+  killall slapd

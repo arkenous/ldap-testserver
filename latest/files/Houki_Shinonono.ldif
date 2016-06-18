@@ -1,0 +1,16 @@
+dn: uid=houki,ou=People,dc=trileg,dc=net
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: houki
+cn: Houki Shinonono
+sn: Shinonono
+givenName: Houki
+userPassword: {SSHA}7M5XHVXy3a3TuQQDIcKeIvk2OY3LWOPk
+LoginShell: /bin/false
+uidNumber: 1003
+gidNumber: 1003
+homeDirectory: /home/houki/

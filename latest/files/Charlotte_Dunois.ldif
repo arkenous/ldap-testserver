@@ -1,0 +1,16 @@
+dn: uid=charlotte,ou=People,dc=trileg,dc=net
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: charlotte
+cn: Charlotte Dunois
+sn: Dunois
+givenName: Charlotte
+userPassword: {SSHA}Tk0pMIh4usIkJQkN3gshaIOcSdhXu0yc
+LoginShell: /bin/false
+uidNumber: 1001
+gidNumber: 1001
+homeDirectory: /home/charlotte/

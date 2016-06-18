@@ -1,0 +1,16 @@
+dn: uid=cecilia,ou=People,dc=trileg,dc=net
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: cecilia
+cn: Cecilia Alcott
+sn: Alcott
+givenName: Cecilia
+userPassword: {SSHA}2Si0L2ccz1885bMWk5thYcmzlIh5KcrG
+LoginShell: /bin/false
+uidNumber: 1004
+gidNumber: 1004
+homeDirectory: /home/cecilia/
