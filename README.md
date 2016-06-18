@@ -6,14 +6,9 @@
 
 Docker image to build LDAP test server.
 
-### Please modify domain name before building
-- latest/Dockerfile
-- latest/files/base.ldif
-- latest/patches/ldap.conf.patch
-- latest/patches/slapd.conf.patch1
-- latest/patches/slapd.conf.patch2
+**Please modify domain name before building**
 
-### Please change Manager password by below command
+**Please change Manager password by below command**
 ```
 echo -n 'your preferred password' > latest/files/manager_pass.txt
 chmod 600 latest/files/manager_pass.txt
