@@ -35,9 +35,20 @@ docker run -p 50389:389 -d ldap-testserver
 ```
 Host 50389 port <-> Container 389 port
 
-####Systemd service script sample
+#### Systemd service script sample
+```
+[Unit]
+Description=LDAP authentication test service
+Requires=docker.service
+After=docker.service
 
-<script src="https://gist.github.com/trileg/ce8106d8cd7a2b11d2dddf948c6798fd.js"></script>
+[Service]
+Type=simple
+ExecStart=/usr/bin/docker run --rm --name container-ldap-testserver -p 50389:389 ldap-testserver
+
+[Install]
+WantedBy=multi-user.target
+```
 
 ### DN
 - Base DN: `dc=trileg,dc=net`
