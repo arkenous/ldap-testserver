@@ -16,7 +16,10 @@ Docker image to build LDAP test server.
 - latest/patches/slapd.conf.patch2
 
 ### Please change Manager password by below command
-`echo -n 'your preferred password' > latest/files/manager_pass.txt`
+```
+echo -n 'your preferred password' > latest/files/manager_pass.txt
+chmod 600 latest/files/manager_pass.txt
+```
 
 -----
 
