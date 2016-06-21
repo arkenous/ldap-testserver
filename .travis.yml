@@ -1,10 +1,19 @@
 language: python
 sudo: required
+python:
+  - "3.5"
 services:
   - docker
 
 env:
   - TARGET_CONTAINER_ID=container-ldap-testserver
 
-script:
+install:
+  - "pip install ldap3"
+
+before_script:
   - docker build -t ldap-testserver latest/
+  - docker run -d -p 50389:389 --name $TARGET_CONTAINER_ID ldap-testserver
+
+script:
+  - nosetests latest
