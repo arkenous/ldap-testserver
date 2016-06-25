@@ -3,6 +3,7 @@
 [![AMA](https://img.shields.io/badge/ask%20me-anything-0e7fc0.svg)](https://github.com/trileg/ama)
 [![GitHub release](https://img.shields.io/github/release/trileg/ldap-testserver.svg?maxAge=3600)](https://github.com/trileg/ldap-testserver/releases/latest)
 [![license](https://img.shields.io/github/license/trileg/ldap-testserver.svg?maxAge=2592000)](LICENSE)
+[![Website](https://img.shields.io/website-up-down-green-red/https/ldap.trileg.net.svg?maxAge=600)](https://ldap.trileg.net/)
 
 Docker image to build LDAP test server.
 
