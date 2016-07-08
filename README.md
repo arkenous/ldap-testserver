@@ -36,7 +36,10 @@ After=docker.service
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/docker run --rm --name container-ldap-testserver -p 50389:389 ldap-testserver
+ExecStartPre=/usr/bin/docker stop container-ldap-testserver
+ExecStartPre=/usr/bin/docker rm container-ldap-testserver
+ExecStart=/usr/bin/docker run --name container-ldap-testserver -p 50389:389 ldap-testserver
+ExecStop=/usr/bin/docker stop container-ldap-testserver
 
 [Install]
 WantedBy=multi-user.target
