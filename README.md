@@ -23,7 +23,7 @@ docker build -t ldap-testserver latest/
 
 Run docker container from builded image
 ```
-docker run -p 50389:389 -d ldap-testserver
+docker run -p 50389:389 -d --name container-ldap-testserver ldap-testserver
 ```
 Host 50389 port <-> Container 389 port
 
