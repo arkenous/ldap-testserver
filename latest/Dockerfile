@@ -1,6 +1,6 @@
 ## -*- docker-image-name: "trileg/ldap-testserver" -*-
 FROM trileg/arch-base:latest
-MAINTAINER Kensuke Kosaka <kosaka@trileg.net>
+MAINTAINER Kensuke Kosaka <k@trileg.net>
 
 RUN pacman -Syu --noconfirm patch openldap &> /dev/null
 
