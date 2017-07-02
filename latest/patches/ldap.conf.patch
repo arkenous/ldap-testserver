@@ -6,7 +6,7 @@
  
 -#BASE	dc=example,dc=com
 -#URI	ldap://ldap.example.com ldap://ldap-master.example.com:666
-+BASE	dc=trileg,dc=net
++BASE	dc=k3n,dc=link
 +URI	ldap://localhost
  
  #SIZELIMIT	12

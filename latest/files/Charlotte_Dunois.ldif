@@ -1,4 +1,4 @@
-dn: uid=charlotte,ou=People,dc=trileg,dc=net
+dn: uid=charlotte,ou=People,dc=k3n,dc=link
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
@@ -9,7 +9,7 @@ uid: charlotte
 cn: Charlotte Dunois
 sn: Dunois
 givenName: Charlotte
-userPassword: {SSHA}Tk0pMIh4usIkJQkN3gshaIOcSdhXu0yc
+userPassword: {SSHA}O9rdHh/qVfRhr4iaIvmoAkANUlWcbmBj
 LoginShell: /bin/false
 uidNumber: 1001
 gidNumber: 1001

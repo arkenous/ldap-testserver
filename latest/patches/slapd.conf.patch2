@@ -12,7 +12,7 @@
 +
 +access to *
 +	by self read
-+	by dn.base="cn=Manager,dc=trileg,dc=net" write
++	by dn.base="cn=Manager,dc=k3n,dc=link" write
 +	by * read
 +
  #######################################################################

@@ -1,4 +1,4 @@
-dn: uid=lingyin,ou=People,dc=trileg,dc=net
+dn: uid=lingyin,ou=People,dc=k3n,dc=link
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
@@ -9,7 +9,7 @@ uid: lingyin
 cn: Lingyin Huang
 sn: Huang
 givenName: Lingyin
-userPassword: {SSHA}5ibxeSaq5IRek4TiTX4Die+TAZzwGE2i
+userPassword: {SSHA}HiRugntFc1xTVg1TgHljG1pdZvmEzknU
 LoginShell: /bin/false
 uidNumber: 1005
 gidNumber: 1005

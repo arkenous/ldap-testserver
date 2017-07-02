@@ -1,26 +1,26 @@
-# trileg.net
-dn: dc=trileg,dc=net
-dc: trileg
+# k3n.link
+dn: dc=k3n,dc=link
+dc: k3n
 o: Example Organization
 objectClass: dcObject
 objectClass: organization
 
-# Manager, trileg.net
-dn: cn=Manager,dc=trileg,dc=net
+# Manager, k3n.link
+dn: cn=Manager,dc=k3n,dc=link
 cn: Manager
 description: LDAP administrator
 objectClass: organizationalRole
 objectClass: top
-roleOccupant: dc=trileg,dc=net
+roleOccupant: dc=k3n,dc=link
 
-# People, trileg.net
-dn: ou=People,dc=trileg,dc=net
+# People, k3n.link
+dn: ou=People,dc=k3n,dc=link
 ou: People
 objectClass: top
 objectClass: organizationalUnit
 
-# Groups, trileg.net
-dn: ou=Group,dc=trileg,dc=net
+# Groups, k3n.link
+dn: ou=Group,dc=k3n,dc=link
 ou: Group
 objectClass: top
 objectClass: organizationalUnit

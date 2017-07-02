@@ -1,4 +1,4 @@
-dn: uid=cecilia,ou=People,dc=trileg,dc=net
+dn: uid=cecilia,ou=People,dc=k3n,dc=link
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
@@ -9,7 +9,7 @@ uid: cecilia
 cn: Cecilia Alcott
 sn: Alcott
 givenName: Cecilia
-userPassword: {SSHA}2Si0L2ccz1885bMWk5thYcmzlIh5KcrG
+userPassword: {SSHA}X1ClV0PVIkNkMuZWA2g0crH3DY2l5ZOq
 LoginShell: /bin/false
 uidNumber: 1004
 gidNumber: 1004

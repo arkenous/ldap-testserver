@@ -1,4 +1,4 @@
-dn: uid=laura,ou=People,dc=trileg,dc=net
+dn: uid=laura,ou=People,dc=k3n,dc=link
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
@@ -9,7 +9,7 @@ uid: laura
 cn: Laura Bodewig
 sn: Bodewig
 givenName: Laura
-userPassword: {SSHA}1H7AWYlhVUiXC2O6WMg4nuklVYvdrsB1
+userPassword: {SSHA}0DuAMwBpgxl7QZWx54KX6UNiqqhhqUVT
 LoginShell: /bin/false
 uidNumber: 1002
 gidNumber: 1002

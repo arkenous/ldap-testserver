@@ -1,6 +1,6 @@
 # ldap-testserver
-[![Build Status](https://travis-ci.org/trileg/ldap-testserver.svg?branch=master)](https://travis-ci.org/trileg/ldap-testserver)
-[![AMA](https://img.shields.io/badge/ask%20me-anything-0e7fc0.svg)](https://github.com/trileg/ama)
+[![Build Status](https://travis-ci.org/k3nsuk3/ldap-testserver.svg?branch=master)](https://travis-ci.org/k3nsuk3/ldap-testserver)
+[![AMA](https://img.shields.io/badge/ask%20me-anything-0e7fc0.svg)](https://github.com/k3nsuk3/ama)
 
 Docker image to build LDAP test server.
 
@@ -12,7 +12,7 @@ chmod 600 latest/files/manager_pass.txt
 
 -----
 
-## How to use this?
+## How to use?
 Build docker image using Dockerfile
 ```
 docker build -t ldap-testserver latest/
@@ -43,8 +43,8 @@ WantedBy=multi-user.target
 ```
 
 ### DN
-- Base DN: `dc=trileg,dc=net`
-- User DN: `uid=charlotte,ou=People,dc=trileg,dc=net`
+- Base DN: `dc=k3n,dc=link`
+- User DN: `uid=charlotte,ou=People,dc=k3n,dc=link`
 
 ### User list
 - uid=`charlotte`, password=`dunois`

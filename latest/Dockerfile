@@ -1,6 +1,6 @@
-## -*- docker-image-name: "trileg/ldap-testserver" -*-
-FROM trileg/arch-base:latest
-MAINTAINER Kensuke Kosaka <k@trileg.net>
+## -*- docker-image-name: "k3nsuk3/ldap-testserver" -*-
+FROM k3nsuk3/arch-base:latest
+MAINTAINER Kensuke Kousaka <k@k3n.link>
 
 RUN pacman -Syu --noconfirm patch openldap &> /dev/null
 
@@ -45,7 +45,7 @@ COPY files/base.ldif /tmp/base.ldif
 COPY files/manager_pass.txt /tmp/manager_pass.txt
 RUN slapd && \
   sleep 5s && \
-  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/base.ldif &> /dev/null && \
+  ldapadd -D "cn=Manager,dc=k3n,dc=link" -y /tmp/manager_pass.txt -f /tmp/base.ldif &> /dev/null && \
   killall slapd && \
   rm -f /tmp/base.ldif && \
   rm -f /tmp/manager_pass.txt
@@ -59,11 +59,11 @@ COPY files/Cecilia_Alcott.ldif /tmp/Cecilia_Alcott.ldif
 COPY files/Lingyin_Huang.ldif /tmp/Lingyin_Huang.ldif
 RUN slapd && \
   sleep 5s && \
-  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Charlotte_Dunois.ldif && \
-  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Laura_Bodewig.ldif && \
-  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Houki_Shinonono.ldif && \
-  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Cecilia_Alcott.ldif && \
-  ldapadd -D "cn=Manager,dc=trileg,dc=net" -y /tmp/manager_pass.txt -f /tmp/Lingyin_Huang.ldif && \
+  ldapadd -D "cn=Manager,dc=k3n,dc=link" -y /tmp/manager_pass.txt -f /tmp/Charlotte_Dunois.ldif && \
+  ldapadd -D "cn=Manager,dc=k3n,dc=link" -y /tmp/manager_pass.txt -f /tmp/Laura_Bodewig.ldif && \
+  ldapadd -D "cn=Manager,dc=k3n,dc=link" -y /tmp/manager_pass.txt -f /tmp/Houki_Shinonono.ldif && \
+  ldapadd -D "cn=Manager,dc=k3n,dc=link" -y /tmp/manager_pass.txt -f /tmp/Cecilia_Alcott.ldif && \
+  ldapadd -D "cn=Manager,dc=k3n,dc=link" -y /tmp/manager_pass.txt -f /tmp/Lingyin_Huang.ldif && \
   rm -f /tmp/manager_pass.txt && \
   rm -f /tmp/Charlotte_Dunois.ldif && \
   rm -f /tmp/Laura_Bodewig.ldif && \

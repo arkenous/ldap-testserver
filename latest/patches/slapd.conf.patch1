@@ -16,8 +16,8 @@
  maxsize		1073741824
 -suffix		"dc=my-domain,dc=com"
 -rootdn		"cn=Manager,dc=my-domain,dc=com"
-+suffix		"dc=trileg,dc=net"
-+rootdn		"cn=Manager,dc=trileg,dc=net"
++suffix		"dc=k3n,dc=link"
++rootdn		"cn=Manager,dc=k3n,dc=link"
  # Cleartext passwords, especially for the rootdn, should
  # be avoid.  See slappasswd(8) and slapd.conf(5) for details.
  # Use of strong authentication encouraged.

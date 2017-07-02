@@ -1,4 +1,4 @@
-dn: uid=houki,ou=People,dc=trileg,dc=net
+dn: uid=houki,ou=People,dc=k3n,dc=link
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
@@ -9,7 +9,7 @@ uid: houki
 cn: Houki Shinonono
 sn: Shinonono
 givenName: Houki
-userPassword: {SSHA}7M5XHVXy3a3TuQQDIcKeIvk2OY3LWOPk
+userPassword: {SSHA}q/a1+EfQjcNKTIpqF2K8J0jdSznBPLb8
 LoginShell: /bin/false
 uidNumber: 1003
 gidNumber: 1003
