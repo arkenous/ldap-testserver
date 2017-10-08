@@ -16,7 +16,6 @@ RUN sed -i '/^rootpw/d' /etc/openldap/slapd.conf && \
 RUN cp /etc/openldap/DB_CONFIG.example /var/lib/openldap/openldap-data/DB_CONFIG
 
 RUN rm -rf /etc/openldap/slapd.d/* && \
-  mkdir /run/openldap && \
   slapd && \
   sleep 5s && \
   killall slapd && \
